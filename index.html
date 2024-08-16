@@ -10,7 +10,7 @@
             background-color: transparent; /* Set to transparent to match Beehiiv's background */
             color: #111827;
             padding: 0;
-            margin: 0; /* Remove any extra space at the bottom */
+            margin: 0;
         }
         .dropdown-container {
             border: 1px solid #ccc;
@@ -89,19 +89,11 @@
     </div>
 
     <script>
-        // Function to send the height of the content to the parent page
-        function sendHeight() {
-            const height = document.documentElement.scrollHeight;
-            parent.postMessage(height, "*");
-        }
-
-        // Send height when the page loads
-        window.onload = sendHeight;
-
-        // Send height whenever the content changes
-        window.addEventListener('resize', sendHeight);
+        // JavaScript to handle the dropdown functionality
         document.querySelectorAll('.dropdown-btn').forEach(button => {
-            button.addEventListener('click', sendHeight);
+            button.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
         });
     </script>
 </body>
