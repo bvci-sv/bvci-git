@@ -89,11 +89,19 @@
     </div>
 
     <script>
-        // JavaScript to handle the dropdown functionality
+        // Function to send the height of the content to the parent page
+        function sendHeight() {
+            const height = document.documentElement.scrollHeight;
+            parent.postMessage(height, "*");
+        }
+
+        // Send height when the page loads
+        window.onload = sendHeight;
+
+        // Send height whenever the content changes
+        window.addEventListener('resize', sendHeight);
         document.querySelectorAll('.dropdown-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                this.parentElement.classList.toggle('active');
-            });
+            button.addEventListener('click', sendHeight);
         });
     </script>
 </body>
