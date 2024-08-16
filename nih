@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIH SBIR/STTR Information</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: transparent;
+            color: #111827;
+            padding: 0;
+            margin: 0;
+        }
+        .dropdown-container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        .dropdown-btn {
+            background-color: #0C4A6E;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            padding-top: 10px;
+        }
+        .dropdown-container.active .dropdown-content {
+            display: block;
+        }
+        a {
+            color: #0C4A6E;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-left: 20px;
+            padding-left: 20px;
+            list-style-type: disc;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown-container">
+        <button class="dropdown-btn">National Institutes of Health (NIH) ▼</button>
+        <div class="dropdown-content">
+            <p>The NIH is the largest funder of biomedical research in the U.S. and is comprised of 27 Institutes and Centers, each with their own individual missions and funding priorities. The NIH uses the SBIR/STTR programs to fund small businesses that are developing innovative biomedical and health-related technologies. Their aim is to allow businesses to de-risk their technologies before scaling.</p>
+            <ul>
+                <li>Understanding SBIR and STTR (<a href="https://seed.nih.gov">seed.nih.gov</a>)</li>
+                <li>Historical funding trends on SBIR/STTR grants (<a href="https://report.nih.gov/nihdatabook">NIH Data Book</a>)</li>
+                <li>Tax implications of federal grants (<a href="https://www.wisconsinctc.org">Wisconsin Center for Technology Commercialization</a>)</li>
+                <li>SBIR/STTR grant examples (National Institutes of Health, <a href="https://nida.nih.gov/funding/small-business-innovation-research-sbir-technology-transfer-sttr-programs/resources/sample-applications">NIDA</a> and <a href="https://www.nia.nih.gov/research/sbir/nia-small-business-sample-applications">NIA</a>)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the dropdown functionality
+        document.querySelectorAll('.dropdown-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
