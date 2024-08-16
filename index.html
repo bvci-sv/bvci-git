@@ -11,6 +11,7 @@
             color: #111827;
             padding: 0;
             margin: 0;
+            overflow: hidden; /* Prevents unnecessary scrolling */
         }
         .dropdown-container {
             border: 1px solid #ccc;
@@ -95,6 +96,11 @@
                 this.parentElement.classList.toggle('active');
             });
         });
+
+        // Prevent unnecessary scrolling by adjusting height dynamically
+        window.onload = function() {
+            document.body.style.height = document.documentElement.scrollHeight + "px";
+        };
     </script>
 </body>
 </html>
