@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBIR/STTR Information</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB;
+            color: #111827;
+            padding: 20px;
+        }
+        .dropdown-container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .dropdown-btn {
+            background-color: #0C4A6E;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            padding-top: 10px;
+        }
+        .dropdown-container.active .dropdown-content {
+            display: block;
+        }
+        a {
+            color: #0C4A6E;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-left: 20px;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <!-- NIH Dropdown -->
+    <div class="dropdown-container">
+        <button class="dropdown-btn">National Institutes of Health (NIH) ▼</button>
+        <div class="dropdown-content">
+            <p>The NIH is the largest funder of biomedical research in the U.S. and is comprised of 27 Institutes and Centers, each with their own individual missions and funding priorities. The NIH uses the SBIR/STTR programs to fund small businesses that are developing innovative biomedical and health-related technologies. Their aim is to allow businesses to de-risk their technologies before scaling.</p>
+            <ul>
+                <li>Understanding SBIR and STTR (<a href="https://seed.nih.gov">seed.nih.gov</a>)</li>
+                <li>Historical funding trends on SBIR/STTR grants (<a href="https://report.nih.gov/nihdatabook">NIH Data Book</a>)</li>
+                <li>Tax implications of federal grants (<a href="https://www.wisconsinctc.org">Wisconsin Center for Technology Commercialization</a>)</li>
+                <li>SBIR/STTR grant examples (National Institutes of Health, <a href="https://nida.nih.gov/funding/small-business-innovation-research-sbir-technology-transfer-sttr-programs/resources/sample-applications">NIDA</a> and <a href="https://www.nia.nih.gov/research/sbir/nia-small-business-sample-applications">NIA</a>)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- NSF Dropdown -->
+    <div class="dropdown-container">
+        <button class="dropdown-btn">National Science Foundation (NSF) ▼</button>
+        <div class="dropdown-content">
+            <p>The NSF supports fundamental research and education across all fields of science and engineering. The NSF’s SBIR/STTR programs focus on funding high-risk, high-impact innovations with the potential to transform markets and industries. With an emphasis on deep technology and early-stage development, NSF’s approach aims to foster the growth of groundbreaking technologies that may not attract traditional investment. Uniquely flexible, NSF supports small businesses in diverse sectors, including AI, advanced materials, biotechnology, and others.</p>
+        </div>
+    </div>
+
+    <!-- DARPA Dropdown -->
+    <div class="dropdown-container">
+        <button class="dropdown-btn">Defense Advanced Research Projects Agency (DARPA) ▼</button>
+        <div class="dropdown-content">
+            <p>DARPA is the research agency for the U.S. Department of Defense, known for driving innovation with a lean team of just 100-200 technical and support staff. They focus on innovative, high-risk, high-reward projects and have structured their SBIR/STTR program to be exceptionally agile, allowing rapid development of breakthrough technologies.</p>
+            <ul>
+                <li>DARPA Connect — launched in 2021 to create a front door into a historically elusive agency (<a href="https://www.darpaconnect.us/home">DARPA Connect Portal</a>)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the dropdown functionality
+        document.querySelectorAll('.dropdown-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
